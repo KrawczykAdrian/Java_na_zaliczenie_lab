@@ -24,7 +24,7 @@ public abstract class Car {
 
     public ZadanieCar(String color, double dm, int doors) {
 
-        this.kolor = color;
+        this.color = color;
         this.dm = dm;
         this.doors = doors;
     }
