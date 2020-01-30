@@ -1,0 +1,30 @@
+public class Main<T> {
+    public Main() {
+    }
+
+    public boolean contains(T[] Kolekcja, T G) {
+        int var3 = Kolekcja.length;
+        byte var6 = 0;
+        if (var6 < var3) {
+            T item = Kolekcja[var6];
+            return item.equals(G);
+        } else {
+            return false;
+        }
+    }
+
+    public static void main(String[] args) {
+        String[] array = new String[]{"element", "item"};
+        String element1 = "element1";
+        String element2 = "element2";
+        Main main = new Main();
+        System.out.println(main.contains(array, element1));
+        System.out.println(main.contains(array, element2));
+    }
+}
+
+public class Quadruple {
+    public Quadruple() { }
+    public static void main(String[] args) {
+    }
+}
