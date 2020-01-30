@@ -1,0 +1,49 @@
+public class Main {
+
+    public static void main(String[] args) {
+        Square kwadrat = new Square(4);
+        kwadrat.printSidesNumber();
+        kwadrat.resetAllAttributes();
+        kwadrat.printSidesNumber();
+    }
+}
+
+public interface NumberOfSidesPrintable {
+    void printSidesNumber();
+
+}
+
+package Figure;
+
+public interface Resetable {
+    void resetAllAttributes();
+
+}
+
+public class Square extends Figure implements Resetable {
+    Square(int numberOfSides) {
+        super(numberOfSides);
+
+        System.out.println("Kwadrat");
+    }
+
+    public void resetAllAttributes() {
+        System.out.println("reset");
+        super.Reset();
+    }
+}
+
+public class Figure  implements NumberOfSidesPrintable {
+    private int liczbaBokow;
+
+    Figure(int numberOfSides){
+        liczbaBokow = numberOfSides;
+    }
+    public void printSidesNumber() {
+        System.out.println("Liczba boków = " + liczbaBokow);
+    }
+
+    public void Reset(){
+        liczbaBokow = 0;
+    }
+}
