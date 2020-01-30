@@ -1,0 +1,76 @@
+public class Student extends University{
+    Student(int age, String name) {
+        super(age, name);
+    }
+
+}
+
+public class Teachers extends University implements Vips  {
+    private String contact;
+
+    Teacher(int age, String name , String contakt) {
+        super(age, name);
+
+        contakt = contact;
+    }
+
+    @Override
+    public String GetContactNumber() {
+        return contakt;
+    }
+}
+
+public abstract class UniversityPerson implements Person {
+    private int age;
+    private String name;
+
+    UniversityPerson(int age , String name ){
+        this.age = age;
+        this.name = name;
+    }
+
+    public void SetName(String name) {
+        this.name = name;
+    }
+
+    public String GetName() {
+        return name;
+    }
+
+    public void SetAge(int age) {
+        this.age = age;
+        GetAge();
+    }
+
+    private void GetAge(){
+        System.out.println("Wiek: " + age);
+    }
+
+}
+
+public interface VipPerson  {
+    String GetContactNumber();
+}
+
+
+public class Main {
+    public static void main(String[] args) {
+        Student student = new Student(26, "Adrian");
+        System.out.println("Imie uztkownika " + student.GetName());
+        student.SetName("Janina");
+        System.out.println("Imie uztkownika " + student.GetName());
+        Teacher teacher = new Teacher(25 , "Adam" , "");
+        System.out.println("Kontakt teacher " + teacher.GetContactNumber());
+        System.out.println("Imie nauczyciela  " + teacher.GetName());
+        teacher.SetName("Marta");
+        System.out.println("Imie nauczyciela " + teacher.GetName());
+
+        teacher.SetAge(28);
+    }
+}
+
+public interface persons {
+    void SetName(String name);
+    String GetName();
+    void SetAge(int age);
+}
