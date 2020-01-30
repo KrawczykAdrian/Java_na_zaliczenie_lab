@@ -1,0 +1,3 @@
+Klasa może być podklasą tylko jednej klasy. W przypadku interfejsów, takiego ograniczenia nie ma i 
+klasa może implementować wiele interfejsów. Istniejące klasy mogą w łatwy sposób implementować nowy interfejs. 
+Interfejsy są bardziej elastyczne. 
