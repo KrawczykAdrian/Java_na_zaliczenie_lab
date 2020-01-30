@@ -1,0 +1,26 @@
+// Zadanie 3
+
+public class Account {
+
+    public void Set(double balance){
+        accountNumber = number();
+        accountBalance = balance();
+    }
+
+    Thread bal = new Thread(bal);
+	  Thread.sleep(500);
+
+    synchronized int get() {
+        if (resourceEmpty) {
+            Thread.currentThread().getName();
+        }
+    }
+
+    public static void main(String[] args) {
+        Account a = new Account();
+        a.start();
+    }
+
+
+
+}
