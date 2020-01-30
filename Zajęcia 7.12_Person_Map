@@ -1,0 +1,26 @@
+import java.util.HashMap;
+import java.util.Map;
+
+public class Maps {
+    public Maps() {
+
+    }
+
+    public static void main(String[] args) {
+        Person person = new Person();
+        person.pesel = 999999999;
+        person.imie = "Adrian";
+        Map<Integer, Person> mapPerson = new HashMap();
+        mapPerson.put(person.pesel, person);
+        Person findedPerson = (Person)mapPerson.get(95);
+        System.out.println("Imie: " + findedPerson.imie + " Pesel " + findedPerson.pesel);
+    }
+}
+
+public class Person {
+    public int pesel;
+    public String imie;
+
+    public Person() {
+    }
+}
